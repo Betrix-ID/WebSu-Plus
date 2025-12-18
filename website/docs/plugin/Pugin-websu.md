@@ -1,6 +1,6 @@
 # Plugin WebSu (Webui root and unroot)
 
-:::Kesimpulan
+::: Kesimpulan
   kenali Plugin WebSu tanpan batasan izin bagi root dan batasan untuk unroot
 :::
 
