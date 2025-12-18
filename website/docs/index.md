@@ -20,7 +20,7 @@ hero:
       link: /download
     - theme: alt
       text: View on GitHub
-      link: https://Betrix-ID.github.io/WebSu-Plus/
+      link: https://github.com/Betrix-ID/WebSu-Plus
 
 features:
   - icon: 💻
