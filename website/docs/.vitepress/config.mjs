@@ -12,7 +12,7 @@ export default defineConfig({
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Informasi', link: '/guide/WebSu-info' },
-      { text: 'Plugin', link: '/plugin/websu' }
+      { text: 'Plugin', link: '/plugin/Pugin-websu' }
     ],
 
     // Sidebar Samping
@@ -27,14 +27,14 @@ export default defineConfig({
       {
         text: '🧩 Dokumentasi Plugin',
         items: [
-          { text: 'Plugin WebSu', link: '/plugin/websu' },
+          { text: 'Plugin WebSu', link: '/plugin/Pugin-websu' },
         ]
       }
     ],
 
     // Link Sosial Media
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/username/repository' }
+      { icon: 'github', link: 'https://github.com/Betrix-ID/WebSu-Plus' }
     ],
 
     // Footer
