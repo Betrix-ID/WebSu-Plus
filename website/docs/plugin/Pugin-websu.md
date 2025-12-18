@@ -44,13 +44,14 @@ text
 The module.prop file is the primary identification document. Missing files will result in the module not being recognized.
 Required Schema
 :::
-
+```prop(6)
 id=<string>
 name=<string>
 version=<string>
 versionCode=<int>
 author=<string>
 description=<string>
+```
 
 ### Constraints
 
