@@ -1,4 +1,4 @@
-# 📚 WebSu Plus Documentation
+# WebSu Plus Documentation
 
 Selamat datang di dokumentasi resmi **WebSu Plus (WebPlus)**. WebSu Plus adalah platform eksperimental untuk menjalankan modul berbasis WebUI dengan fleksibilitas akses sistem di Android.
 
@@ -9,7 +9,7 @@ Pilih metode otorisasi yang sesuai dengan status perangkat Anda. WebSu Plus dira
 ### 1. Akses Root (Recommended)
 Untuk pengguna yang menginginkan performa penuh dan kendali sistem total.
 
-:::info PROSES OTORISASI
+::: info PROSES OTORISASI
 Cukup buka aplikasi WebSu Plus, lalu berikan izin saat jendela pop-up Superuser muncul dari salah satu manager berikut:
 * **Magisk**
 * **KernelSU**
