@@ -20,7 +20,7 @@ hero:
       link: /download
     - theme: alt
       text: View on GitHub
-      link: https://github.com/username/repository
+      link: https://Betrix-ID.github.io/WebSu-Plus/
 
 features:
   - icon: 💻
@@ -30,7 +30,7 @@ features:
   - icon: 🌐
     title: Plugin WebUI
     details: Antarmuka interaktif berbasis web untuk mengontrol sistem. Mendukung API JavaScript universal yang kompatibel dengan berbagai environment.
-    link: /plugin/Plugin-websu
+    link: /plugin/Pugin-websu
 
   - icon: 🛡️
     title: Multi-Access Support
