@@ -40,11 +40,11 @@ text
 
 ### Metadata Configuration (module.prop)
 
-::: info
 The module.prop file is the primary identification document. Missing files will result in the module not being recognized.
 Required Schema
-:::
-```prop(6)
+
+```
+prop(6)
 id=<string>
 name=<string>
 version=<string>
@@ -55,7 +55,7 @@ description=<string>
 
 ### Constraints
 
- - ID Format: Must match regex ^[a-zA-Z][a-zA-Z0-9._-]+$.
+ - ID Format: Must match regex `[a-zA-Z][a-zA-Z0-9._-]+$`.
  - Version Code: Must be an integer for version comparison.
  - Encoding: Must use UNIX (LF) line endings. Windows (CR+LF) will cause execution failures.
  - Installation & Deployment
