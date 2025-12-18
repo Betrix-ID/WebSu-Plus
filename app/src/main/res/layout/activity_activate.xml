@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBackground"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:id="@+id/header_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:tint="@color/colorOnSurface"
+            android:src="@drawable/ic_arrow_back_white"
+            android:contentDescription="Back"
+            android:layout_marginRight="12dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="4dp"/>
+
+        <TextView
+            android:id="@+id/text_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Activate"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorOnSurface"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+
+    <LinearLayout
+        android:id="@+id/Api_sizuku"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_card_dark"
+        android:padding="20dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="4dp"
+        android:elevation="4dp"  android:translationZ="4dp">
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start via Api Sizuku"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorOnSurface"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start directly from the Sizuku API or more precisely run \nsizuku and allow the WebSu Plus apk directly from your sizuku application.."
+            android:textSize="13sp"
+            android:textColor="@color/colorSurface"
+            android:layout_marginTop="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btn_instruction"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:text="Launch"
+                android:textAllCaps="false"
+                android:textColor="@color/text_primary"
+                android:background="@drawable/bg_button_rounded"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Rootbeer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_card_dark"
+        android:padding="20dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="4dp"
+        android:elevation="4dp"  android:translationZ="4dp">
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start via Rootbeer"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorOnSurface"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start directly from Rootbeer or more precisely, grant WebSu Plus \nroot access permission from your Magisk, KSU or SukiSu Ultara app."
+            android:textSize="13sp"
+            android:textColor="@color/colorSurface"
+            android:layout_marginTop="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btn_launch_rootbeer"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:text="Launch"
+                android:textAllCaps="false"
+                android:textColor="@color/text_primary"
+                android:background="@drawable/bg_button_rounded"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+

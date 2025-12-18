@@ -1,0 +1,18 @@
+{
+  "name": "websu-plus-docs",
+  "version": "1.0.0",
+  "description": "Dokumentasi Resmi WebSu Plus",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vitepress dev website/docs",
+    "docs:build": "vitepress build website/docs",
+    "docs:preview": "vitepress preview website/docs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "vitepress": "^1.0.0",
+    "vue": "^3.0.0"
+  }
+}

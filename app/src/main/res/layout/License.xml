@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/backgorund"
+    android:paddingTop="8dp"
+    android:padding="20dp">
+
+    <View
+        android:layout_width="32dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:background="@color/text_primary"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/license_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="License GNU V3"
+        android:textSize="22sp"
+        android:textColor="@color/label"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:maxHeight="300dp">
+
+        <TextView
+            android:id="@+id/license_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/label"
+            android:text=""
+            android:autoLink="web"
+            android:linksClickable="true"/>
+
+    </ScrollView>
+</LinearLayout>
+

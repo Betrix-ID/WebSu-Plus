@@ -1,0 +1,995 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_rounded_top"
+    android:paddingTop="8dp">
+
+    <View
+        android:layout_width="32dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:background="@color/text_primary"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filter Settings "
+        android:textSize="17sp"
+        android:textColor="@color/text_primary"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="12dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/bg_rounded_top"
+        android:elevation="4dp"
+        android:padding="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:gravity="center_vertical"
+            android:id="@+id/filter_output_header"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_filter_output"
+                android:tint="#FF5484A6"
+                android:contentDescription="output_icon"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Output Filter "
+                    android:textSize="17sp"
+                    android:textColor="@color/colorOnPrimary"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Filter output to show"
+                    android:textSize="13sp"
+                    android:textColor="@color/text_primary"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/icon_dropdown_output"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_up"
+                android:tint="#FF5484A6"
+                android:contentDescription="dropdown icon"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/filter_output_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:id="@+id/rl_output_command"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginBottom="6dp">
+
+                <TextView
+                    android:id="@+id/tv_output_command"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Output TYPE_COMMAND"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorOnPrimary"/>
+
+                <CheckBox
+                    android:id="@+id/cb_output_command"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:checked="true"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_output_start"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginBottom="6dp">
+
+                <TextView
+                    android:id="@+id/tv_output_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Output TYPE_START"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorOnPrimary"/>
+
+                <CheckBox
+                    android:id="@+id/cb_output_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:checked="true"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_output_stdin"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginBottom="6dp">
+
+                <TextView
+                    android:id="@+id/tv_output_stdin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Output TYPE_STDIN"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorOnPrimary"/>
+
+                <CheckBox
+                    android:id="@+id/cb_output_stdin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:checked="true"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_output_stdout"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginBottom="6dp">
+
+                <TextView
+                    android:id="@+id/tv_output_stdout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Output TYPE_STDOUT"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorOnPrimary"/>
+
+                <CheckBox
+                    android:id="@+id/cb_output_stdout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:checked="true"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_output_stderr"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginBottom="6dp">
+
+                <TextView
+                    android:id="@+id/tv_output_stderr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Output TYPE_STDERR"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorOnPrimary"/>
+
+                <CheckBox
+                    android:id="@+id/cb_output_stderr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:checked="true"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_output_throw"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginBottom="6dp">
+
+                <TextView
+                    android:id="@+id/tv_output_throw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Output TYPE_THROW"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorOnPrimary"/>
+
+                <CheckBox
+                    android:id="@+id/cb_output_throw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:checked="true"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_output_space"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginBottom="6dp">
+
+                <TextView
+                    android:id="@+id/tv_output_space"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Output TYPE_SPACE"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorOnPrimary"/>
+
+                <CheckBox
+                    android:id="@+id/cb_output_space"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:checked="true"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_output_exit"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginBottom="14dp">
+
+                <TextView
+                    android:id="@+id/tv_output_exit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Output TYPE_EXIT"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorOnPrimary"/>
+
+                <CheckBox
+                    android:id="@+id/cb_output_exit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:checked="true"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/bg_rounded_top"
+        android:elevation="4dp"
+        android:padding="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:gravity="center_vertical"
+            android:id="@+id/filter_log_save_header"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_separated"
+                android:tint="#FF5484A6"
+                android:contentDescription="save Icon"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Filter log Save"
+                    android:textSize="17sp"
+                    android:textColor="@color/colorOnPrimary"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="show filter to log save"
+                    android:textSize="13sp"
+                    android:textColor="@color/text_primary"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/icon_dropdown_log_save"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_up"
+                android:tint="#FF5484A6"
+                android:contentDescription="dropdown icon"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/filter_log_save_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:id="@+id/rl_save_command"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginBottom="6dp">
+
+                <TextView
+                    android:id="@+id/tv_save_command"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Save TYPE_COMMAND"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorOnPrimary"/>
+
+                <CheckBox
+                    android:id="@+id/cb_save_command"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:checked="true"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_save_start"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginBottom="6dp">
+
+                <TextView
+                    android:id="@+id/tv_save_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Save TYPE_START"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorOnPrimary"/>
+
+                <CheckBox
+                    android:id="@+id/cb_save_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:checked="true"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_save_stdin"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginBottom="6dp">
+
+                <TextView
+                    android:id="@+id/tv_save_stdin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Save TYPE_STDIN"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorOnPrimary"/>
+
+                <CheckBox
+                    android:id="@+id/cb_save_stdin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:checked="true"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_save_stdout"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginBottom="6dp">
+
+                <TextView
+                    android:id="@+id/tv_save_stdout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Save TYPE_STDOUT"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorOnPrimary"/>
+
+                <CheckBox
+                    android:id="@+id/cb_save_stdout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:checked="true"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_save_stderr"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginBottom="6dp">
+
+                <TextView
+                    android:id="@+id/tv_save_stderr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Save TYPE_STDERR"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorOnPrimary"/>
+
+                <CheckBox
+                    android:id="@+id/cb_save_stderr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:checked="true"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_save_throw"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginBottom="6dp">
+
+                <TextView
+                    android:id="@+id/tv_save_throw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Save TYPE_THROW"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorOnPrimary"/>
+
+                <CheckBox
+                    android:id="@+id/cb_save_throw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:checked="true"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_save_space"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginBottom="6dp">
+
+                <TextView
+                    android:id="@+id/tv_save_space"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Save TYPE_SPACE"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorOnPrimary"/>
+
+                <CheckBox
+                    android:id="@+id/cb_save_space"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:checked="true"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_save_exit"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginBottom="14dp">
+
+                <TextView
+                    android:id="@+id/tv_save_exit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Save TYPE_EXIT"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorOnPrimary"/>
+
+                <CheckBox
+                    android:id="@+id/cb_save_exit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:checked="true"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/bg_rounded_top"
+        android:elevation="4dp"
+        android:padding="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:gravity="center_vertical"
+            android:id="@+id/filter_volume_header"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_filter_volume"
+                android:tint="#FF5484A6"
+                android:contentDescription="volume_icon"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Filter volume "
+                    android:textSize="17sp"
+                    android:textColor="@color/colorOnPrimary"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="show filter to volume"
+                    android:textSize="13sp"
+                    android:textColor="@color/text_primary"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/icon_dropdown_volume"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_up"
+                android:tint="#FF5484A6"
+                android:contentDescription="dropdown icon"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/filter_volume_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:id="@+id/rl_volume_up"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginBottom="6dp">
+
+                <TextView
+                    android:id="@+id/tv_volume_up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Bloking VOLUME_UP"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorOnPrimary"/>
+
+                <CheckBox
+                    android:id="@+id/cb_volume_up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:checked="true"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_volume_down"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginBottom="14dp">
+
+                <TextView
+                    android:id="@+id/tv_volume_down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Bloking VOLUME_DOWN"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorOnPrimary"/>
+
+                <CheckBox
+                    android:id="@+id/cb_volume_down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:checked="true"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/bg_rounded_top"
+        android:elevation="4dp"
+        android:padding="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:gravity="center_vertical"
+            android:id="@+id/filter_delete_header"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_filter_delete"
+                android:tint="#FF5484A6"
+                android:contentDescription="delete_icon"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Filter delete "
+                    android:textSize="17sp"
+                    android:textColor="@color/colorOnPrimary"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="show filter to delete"
+                    android:textSize="13sp"
+                    android:textColor="@color/text_primary"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/icon_dropdown_delete"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_up"
+                android:tint="#FF5484A6"
+                android:contentDescription="dropdown icon"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/filter_delete_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:id="@+id/rl_delete_command"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginBottom="6dp">
+
+                <TextView
+                    android:id="@+id/tv_delete_command"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Deleting TEXT_COMMAND"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorOnPrimary"/>
+
+                <CheckBox
+                    android:id="@+id/cb_delete_command"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:checked="true"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_delete_output"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginBottom="6dp">
+
+                <TextView
+                    android:id="@+id/tv_delete_output"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Deleting TEXT_OUTPUT"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorOnPrimary"/>
+
+                <CheckBox
+                    android:id="@+id/cb_delete_output"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:checked="true"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_delete_input"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginBottom="14dp">
+
+                <TextView
+                    android:id="@+id/tv_delete_input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Deleting TEXT_INPUT"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorOnPrimary"/>
+
+                <CheckBox
+                    android:id="@+id/cb_delete_input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:checked="true"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+

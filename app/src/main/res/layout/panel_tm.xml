@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+    android:fitsSystemWindows="true"
+	android:background="@drawable/backgorund"
+	android:paddingTop="8dp">
+
+	<View
+		android:layout_width="32dp"
+		android:layout_height="4dp"
+		android:layout_gravity="center_horizontal"
+		android:layout_marginTop="8dp"
+		android:background="@color/text_primary"
+		android:layout_marginBottom="16dp"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Alat Alat "
+		android:textSize="17sp"
+		android:textColor="@color/text_primary"
+		android:textStyle="bold"
+		android:layout_gravity="center_horizontal"/>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:layout_marginStart="16dp"
+		android:layout_marginEnd="16dp"
+		android:layout_marginTop="8dp"
+		android:background="@drawable/bg_rounded_top"
+		android:elevation="2dp"
+		android:padding="12dp"
+		android:clickable="true"
+		android:foreground="?attr/selectableItemBackground">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:paddingStart="12dp"
+			android:paddingEnd="12dp"
+			android:paddingTop="8dp"
+			android:paddingBottom="8dp"
+			android:gravity="center_vertical"
+			android:id="@+id/terminal_options_layout">
+
+			<ImageView
+				android:layout_width="20dp"
+				android:layout_height="20dp"
+				android:src="@drawable/ic_terline"
+				android:tint="#FF5484A6"
+				android:contentDescription="Terminal Icon"/>
+
+			<LinearLayout
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:orientation="vertical"
+				android:layout_marginStart="12dp">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Menu Terminal "
+					android:textSize="17sp"
+					android:textColor="@color/colorOnPrimary"/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Execute command and sintaks unifersal shell"
+					android:textSize="13sp"
+					android:textColor="@color/text_primary"/>
+
+			</LinearLayout>
+
+			<ImageView
+				android:layout_width="30dp"
+				android:layout_height="30dp"
+				android:src="@drawable/ic_sup"
+				android:tint="#FF5484A6"
+				android:contentDescription="companion  Icon"/>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:layout_marginStart="16dp"
+		android:layout_marginEnd="16dp"
+		android:layout_marginTop="8dp"
+		android:background="@drawable/bg_rounded_top"
+		android:elevation="2dp"
+		android:padding="12dp"
+		android:layout_marginBottom="24dp"
+		android:clickable="true"
+		android:foreground="?attr/selectableItemBackground">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:paddingStart="12dp"
+			android:paddingEnd="12dp"
+			android:paddingTop="8dp"
+			android:paddingBottom="8dp"
+			android:gravity="center_vertical"
+			android:id="@+id/izin_options_layout">
+
+			<ImageView
+				android:layout_width="20dp"
+				android:layout_height="20dp"
+				android:src="@drawable/ic_refresh"
+				android:tint="#FF5484A6"
+				android:contentDescription="perizinan Icon"/>
+
+			<LinearLayout
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:orientation="vertical"
+				android:layout_marginStart="12dp">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Putuskan perizinan"
+					android:textSize="17sp"
+					android:textColor="@color/colorOnPrimary"/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Will terminate all permissions (Sizuku ,ADB Shell and Super User)  "
+					android:textSize="13sp"
+					android:textColor="@color/text_primary"/>
+
+			</LinearLayout>
+
+			<ImageView
+				android:layout_width="30dp"
+				android:layout_height="30dp"
+				android:src="@drawable/ic_sup"
+				android:tint="#FF5484A6"
+				android:contentDescription="companion  Icon"/>
+
+		</LinearLayout>
+	</LinearLayout>
+</LinearLayout>
+

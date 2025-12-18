@@ -1,0 +1,113 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 36
+    buildToolsVersion "36.0.0"
+
+    namespace "com.WebSu.ig"
+
+    signingConfigs {
+        release {
+            keyAlias "AIDE+"
+            keyPassword "123789456"
+            storePassword "123789456"
+            storeFile file("app-release.jks")
+        }
+        debug {
+            keyAlias "androiddebug"
+            keyPassword "123789456"
+            storePassword "123789456"
+            storeFile file("app-debug.jks")
+        }
+    }
+
+    defaultConfig {
+        applicationId "com.WebSu.ig"
+        minSdkVersion 27
+        targetSdkVersion 36
+        versionCode 2
+        versionName "0.0.2.3"
+        multiDexEnabled true
+
+        ndk {
+            abiFilters "armeabi-v7a", "arm64-v8a",  "x86_64"
+        }
+
+        externalNativeBuild {
+            cmake {
+                arguments.add("-DANDROID_STL=none")
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    buildTypes {
+        release {
+            shrinkResources false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+
+        debug {
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+    }
+}
+
+dependencies {
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.13.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.google.code.gson:gson:2.10.1'
+    compileOnly 'org.projectlombok:lombok:1.18.20'
+
+    // Shizuku
+    implementation 'dev.rikka.shizuku:api:12.1.0'
+    implementation 'dev.rikka.shizuku:provider:12.1.0'
+    implementation 'dev.rikka.shizuku:aidl:12.1.0'
+
+    // Markwon Core
+    implementation 'io.noties.markwon:core:4.6.2' 
+    
+    // Root checking
+    implementation 'com.scottyab:rootbeer-lib:0.1.0'
+
+    // NanoHTTPD
+    implementation 'org.nanohttpd:nanohttpd:2.3.1'
+    implementation 'androidx.webkit:webkit:1.12.1'
+
+    // Cache
+    implementation 'com.jakewharton:disklrucache:2.0.2'
+
+    // Multidex
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    runtimeOnly fileTree(dir: 'runtime', include: ['*.jar'])
+    compileOnly fileTree(dir: 'provider', include: ['*.jar'])
+}

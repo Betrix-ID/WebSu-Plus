@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/colorBackground"
+	android:fitsSystemWindows="true">
+
+	<RelativeLayout
+		android:id="@+id/header"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:fitsSystemWindows="true"
+		android:paddingStart="16dp"
+		android:paddingEnd="16dp"
+		android:paddingTop="4dp"
+		android:paddingBottom="8dp">
+		
+        <ImageView
+			android:id="@+id/btn_kembali"
+			android:layout_width="32dp"
+			android:layout_height="32dp"
+			android:layout_alignParentStart="true"
+			android:layout_centerVertical="true"
+			android:src="@drawable/ic_arrow_back_white"
+			android:tint="@color/colorOnSurface"
+			android:padding="4dp"
+			android:clickable="true"
+			android:focusable="true"
+			android:contentDescription="Kembali" />
+
+		<TextView
+			android:id="@+id/title"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_toEndOf="@id/btn_kembali"
+			android:layout_marginStart="12dp"
+			android:layout_centerVertical="true"
+			android:text="Falsing WebUI"
+			android:textColor="#22A461"
+			android:textSize="23sp"
+			android:textStyle="bold" />
+
+		<ImageView
+			android:id="@+id/btn_transfer"
+			android:layout_width="32dp"
+			android:layout_height="32dp"
+			android:layout_alignParentEnd="true"
+			android:layout_centerVertical="true"
+			android:src="@drawable/ic_separated"
+			android:tint="@color/colorOnSurface"
+			android:padding="4dp"
+			android:clickable="true"
+			android:focusable="true"
+			android:contentDescription="Transfer" />
+	</RelativeLayout>
+
+	<ScrollView
+		android:id="@+id/scroll_console"
+		android:layout_below="@id/header"
+		android:layout_above="@id/bottom_container"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_marginTop="16dp"
+		android:paddingStart="16dp"
+		android:paddingEnd="16dp"
+		android:paddingTop="8dp"
+		android:paddingBottom="8dp"
+		android:scrollbars="none">
+
+		<TextView
+			android:id="@+id/text_console"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textColor="@color/colorOnPrimary"
+			android:textSize="12sp"
+			android:fontFamily="monospace"
+			android:lineSpacingExtra="5dp"
+			android:textIsSelectable="true" />
+	</ScrollView>
+
+	
+	<LinearLayout
+		android:id="@+id/bottom_container"
+		android:layout_alignParentBottom="true"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:fitsSystemWindows="true"
+		android:gravity="center"
+		android:paddingTop="12dp"
+		android:paddingBottom="32dp"   
+		android:clipToPadding="false">
+
+		<Button
+			android:id="@+id/btn_finished"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="16dp"
+			android:layout_marginEnd="16dp"
+			android:padding="14dp"
+			android:text="Falsing and Clear"
+			android:textAllCaps="false"
+			android:textColor="#2E2B45"
+			android:fontFamily="sans-serif-medium"
+			android:drawablePadding="6dp"
+			android:background="@drawable/rounded_button"
+			android:backgroundTint="#FFC1D4E0" />
+	</LinearLayout>
+    
+    <ProgressBar
+        android:id="@+id/loading_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="@color/colorPrimary"
+        android:visibility="gone" />
+    
+    <TextView
+        android:id="@+id/text_loading_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loading_indicator"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="Running final script..."
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:visibility="gone" /> 
+
+</RelativeLayout>
+

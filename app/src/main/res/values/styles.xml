@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!--
+     <style name="AppTheme" parent="android:Theme.Material.NoActionBar">
+    </style> -->
+   
+    <!-- Animasi untuk dialog bawah (opsional) -->
+    <style name="BottomDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+    </style>
+    
+</resources>

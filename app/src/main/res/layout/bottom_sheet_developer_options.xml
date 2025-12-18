@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/backgorund" 
+    android:paddingTop="8dp">
+
+    <View
+        android:layout_width="32dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:background="@color/text_primary" 
+        android:layout_marginBottom="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_rounded_top" 
+        android:elevation="2dp"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="12dp" 
+            android:paddingEnd="12dp"  
+            android:paddingTop="8dp"   
+            android:paddingBottom="8dp" 
+            android:gravity="center_vertical"
+            android:id="@+id/developer_options_layout">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_developer_mode"
+                android:tint="#FF5484A6"
+                android:contentDescription="Developer Icon"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enable developer options"
+                    android:textSize="17sp" 
+                    android:textColor="@color/colorOnPrimary"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Show hidden settings and debug info relevant only for developers."
+                    android:textSize="13sp"
+                    android:textColor="@color/text_primary"/>
+            </LinearLayout>
+
+            <com.WebSu.ig.logd
+                android:id="@+id/switch_developer_options"
+                android:layout_width="55dp" 
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:checked="true"
+                android:thumbTint="#FF5484A6"
+                android:trackTint="#FF5484A6"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_rounded_top" 
+        android:elevation="2dp"
+        android:padding="12dp"
+        android:layout_marginBottom="24dp"> 
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="12dp" 
+            android:paddingEnd="12dp"  
+            android:paddingTop="8dp"    
+            android:paddingBottom="8dp" 
+            android:gravity="center_vertical"
+            android:id="@+id/Api_js_options_layout">
+
+            <ImageView
+                android:layout_width="20dp" 
+                android:layout_height="20dp"
+                android:src="@drawable/ic_javascript"
+                android:tint="#FF5484A6"
+                android:contentDescription="JavaScript Icon"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enable Api JavaScript universal"
+                    android:textSize="17sp" 
+                    android:textColor="@color/colorOnPrimary"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Javascript Api unifersal online and Offline."
+                    android:textSize="13sp" 
+                    android:textColor="@color/text_primary"/>
+            </LinearLayout>
+
+            <com.WebSu.ig.logd
+                android:id="@+id/switch_Enable_Api_js"
+                android:layout_width="55dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:checked="true"
+                android:thumbTint="#FF5484A6"
+                android:trackTint="#FF5484A6"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+

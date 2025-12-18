@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Bar atas: paling panjang -->
+    <path
+        android:fillColor="#33363A"
+        android:pathData="M10,6 H20 v2 H10 z" />
+
+    <!-- Bar tengah: paling pendek -->
+    <path
+        android:fillColor="#33363A"
+        android:pathData="M14,11 H20 v2 H14 z" />
+
+    <!-- Bar bawah: panjang sedang -->
+    <path
+        android:fillColor="#33363A"
+        android:pathData="M11,16 H20 v2 H11 z" />
+</vector>

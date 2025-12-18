@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+    <color name="primary_color">#6750A4</color>
+   <color name="background_primary">#E6E4E2E2</color>
+    <color name="card_background">#EAFFFFFF</color>
+    <color name="text_primary">#E6E4E2E2</color>
+    <color name="text_secondary">#49454F</color>
+    <color name="purple_card_bg">#EADDFF</color>
+    <color name="purple_badge_bg">#D0BCFF</color>
+    <color name="bage_terminal">#0F1018</color>
+    <color name="bage_output">#B1E5EEF9</color>
+    
+    <color name="colorPrimary">#B5C2CC</color>
+    <color name="blockSur">#FF5484A6</color>
+    <color name="colorOnPrimary">#FFFFFFFF</color>       
+    <color name="colorSurface">#D9D9D9</color>
+    <color name="colorBackground">#121212</color>
+    <color name="colorTerminal">#E0E0E0</color>
+    <color name="colorOnSurface">#E0E0E0</color>
+    <color name="colorBgd">#1A1A1A</color>
+    <color name="colorOnBackground">#0F1018</color> 
+    <color name="keyTerminal">#EAFFFFFF</color>
+    <color name="bgOpen">#0F1018</color>
+    <color name="label">#EAFFFFFF</color>
+    <color name="colorTextSecondary">#FF5484A6</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="bg_thumb_track">#242424</color>
+    <color name="thumb_off_button">#6E6E6E</color>
+    <color name="shadow_off_border">#A6A6A6</color>
+    <color name="bage_thumb">#A6A6A6</color>
+
+    <color name="black">#FF000000</color>
+    <color name="blue">#2196F3</color>
+    <color name="purple">#D0BCFF</color>
+    <color name="red">#BF2626</color>
+    <color name="olive">#BD8B45</color>
+    <color name="green">#209A35</color>
+    <color name="orange">#FF8E00</color>
+    <color name="magenta">#FFD400</color>
+    
+ </resources>

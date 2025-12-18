@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="#d9d9d9">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <ImageView
+            android:id="@+id/module_banner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:background="@drawable/module_banner_placeholder_bg"
+            android:src="@null"
+            android:alpha="0.3"
+            android:contentDescription="module banner"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+            <com.WebSu.ig.logd
+                android:id="@+id/module_toggle"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:checked="true"
+                android:thumbTint="#FF5484A6"
+                android:trackTint="#FF5484A6"/>
+
+            <LinearLayout
+                android:id="@+id/module_info_container_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/module_toggle"
+                android:layout_marginEnd="16dp"
+                android:layout_alignParentTop="true">
+                
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="4dp">
+
+                    <TextView
+                        android:id="@+id/module_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="10sp"
+                        android:textColor="#333333"
+                        android:paddingStart="6dp"
+                        android:paddingEnd="6dp"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:background="@drawable/bg_nav_active" />
+
+                    <TextView
+                        android:id="@+id/module_update"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="UPDATE"
+                        android:textSize="10sp"
+                        android:textColor="#333333"
+                        android:layout_marginStart="8dp"
+                        android:paddingStart="6dp"
+                        android:paddingEnd="6dp"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:background="@drawable/bg_get"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/module_tag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="WEBUI"
+                        android:textSize="10sp"
+                        android:textColor="#333333"
+                        android:layout_marginStart="8dp"
+                        android:paddingStart="6dp"
+                        android:paddingEnd="6dp"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/module_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorOnPrimary"
+                    android:layout_marginTop="4dp"/>
+
+                <TextView
+                    android:id="@+id/module_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="12sp"
+                    android:textColor="@color/label"/>
+
+                <TextView
+                    android:id="@+id/module_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="12sp"
+                    android:textColor="@color/label"/>
+
+                <TextView
+                    android:id="@+id/module_json"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="12sp"
+                    android:textColor="@color/label"/>
+
+                <TextView
+                    android:id="@+id/module_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="12sp"
+                    android:textColor="@color/label"
+                    android:layout_marginTop="8dp"
+                    android:maxLines="3"      
+                    android:ellipsize="end"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_delete"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/bg_button_loop"
+                android:drawableStart="@drawable/ic_delete_plugin"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:padding="4dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+            /> <Button
+                android:id="@+id/btn_update"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:text="Update"
+                android:textAllCaps="false"
+                android:textSize="10sp"
+                android:textColor="#F1F1F1"
+                android:drawableTint="#F1F1F1"
+                android:minWidth="0dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:drawableStart="@drawable/ic_update_plugin"
+                android:drawablePadding="2dp"
+                android:background="@drawable/bg_update"
+                android:layout_toStartOf="@id/btn_delete"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="8dp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_open"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:text="Open"
+                android:textAllCaps="false"
+                android:textSize="12sp"
+                android:textColor="#000000"
+                android:minWidth="0dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:drawableStart="@drawable/ic_open_plugin"
+                android:drawablePadding="4dp"
+                android:background="@drawable/bg_nav_active"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="8dp"
+            /> </RelativeLayout>
+    </FrameLayout>
+</androidx.cardview.widget.CardView>
+

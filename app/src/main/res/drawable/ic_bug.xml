@@ -1,0 +1,11 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Ikon Bug -->
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M20,8h-2.81c-0.45,-1.19 -1.51,-2.11 -2.81,-2.34V4h-4v1.66C8.08,6.02 7.02,6.94 6.56,8H4v2h2.09c-0.05,0.33 -0.09,0.66 -0.09,1v1H4v2h2v1c0,0.34 0.04,0.67 0.09,1H4v2h2.56c0.46,1.06 1.36,1.91 2.44,2.34V20h4v-1.66c1.3,-0.23 2.36,-1.15 2.81,-2.34H20v-2h-2.09c0.05,-0.33 0.09,-0.66 0.09,-1v-1h2v-2h-2v-1c0,-0.34 -0.04,-0.67 -0.09,-1H20V8zM12,18c-2.21,0 -4,-1.79 -4,-4v-2c0,-2.21 1.79,-4 4,-4s4,1.79 4,4v2c0,2.21 -1.79,4 -4,4z"/>
+</vector>

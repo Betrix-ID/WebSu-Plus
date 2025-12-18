@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minHeight="900dp"
+    android:background="@color/colorBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <View
+            android:layout_width="match_parent"
+            android:background="@android:color/transparent"
+            android:layout_height="30dp"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true"
+            android:overScrollMode="always"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:paddingBottom="120dp"
+                android:minHeight="600dp"> 
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="20dp"> 
+
+                    <TextView
+                        android:id="@+id/app_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="WebSu Plus"
+                        android:textColor="@color/colorOnSurface"
+                        android:textSize="24sp"
+                        android:includeFontPadding="false"/>
+
+                    <ImageButton
+                        android:id="@+id/Olik"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="16dp" 
+                        android:layout_marginEnd="0dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:elevation="6dp"
+                        android:scaleType="centerInside"
+                        android:tint="@color/colorOnSurface"
+                        android:src="@drawable/ic_bar"
+                        android:contentDescription="Menu lainnya"
+                        android:layout_marginTop="0dp"/> 
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:id="@+id/error_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/bg_card_purple"
+                    android:padding="20dp"
+                    android:layout_marginBottom="4dp"
+                    android:clipToOutline="true"
+                    android:elevation="4dp"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground"> 
+                    
+                    <ImageView
+                        android:id="@+id/icon_block"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="12dp"
+                        android:src="@drawable/ic_success"
+                        android:tint="#FFFFFF"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:id="@+id/text_status"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorOnSurface"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                android:fontFamily="sans-serif-medium"
+                                android:includeFontPadding="false"/>
+
+                            <TextView
+                                android:id="@+id/error_subtitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:background="@drawable/bg_badge_purple"
+                                android:textColor="@color/colorOnSurface"
+                                android:textSize="11.5sp"
+                                android:fontFamily="sans-serif-medium"
+                                android:paddingLeft="8dp"
+                                android:paddingRight="8dp"
+                                android:paddingTop="3dp"
+                                android:paddingBottom="3dp"
+                                android:includeFontPadding="false"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/error_version"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorOnSurface"
+                            android:textSize="13sp"
+                            android:fontFamily="monospace"
+                            android:layout_marginTop="5dp"
+                            android:includeFontPadding="false"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/system_info_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_card_dark"
+                    android:padding="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_gravity="center_horizontal"
+                    android:elevation="8dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="16dp">
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:src="@drawable/ic_kernel"
+                            android:tint="@color/colorOnSurface"
+                            android:layout_marginEnd="14dp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Kernel"
+                                android:textColor="@color/colorOnSurface"
+                                android:textSize="15sp"
+                                android:layout_marginBottom="4dp" />
+
+                            <TextView
+                                android:id="@+id/text_kernel_under_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="@color/colorSurface"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="16dp">
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:src="@drawable/ic_id"
+                            android:tint="@color/colorOnSurface"
+                            android:layout_marginEnd="14dp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Chipset"
+                                android:textColor="@color/colorOnSurface"
+                                android:textSize="15sp"
+                                android:layout_marginBottom="4dp" />
+
+                            <TextView
+                                android:id="@+id/Chipset_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="@color/colorSurface"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="16dp">
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:src="@drawable/ic_android"
+                            android:tint="@color/colorOnSurface"
+                            android:layout_marginEnd="14dp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Versi Android"
+                                android:textColor="@color/colorOnSurface"
+                                android:textSize="15sp"
+                                android:layout_marginBottom="4dp" />
+
+                            <TextView
+                                android:id="@+id/text_android_version"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="@color/colorSurface"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="16dp">
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:src="@drawable/ic_hook"
+                            android:tint="@color/colorOnSurface"
+                            android:layout_marginEnd="14dp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Hook Type"
+                                android:textColor="@color/colorOnSurface"
+                                android:textSize="15sp"
+                                android:layout_marginBottom="4dp" />
+
+                            <TextView
+                                android:id="@+id/text_hook"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="@color/colorSurface"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:src="@drawable/ic_lock"
+                            android:tint="@color/colorOnSurface"
+                            android:layout_marginEnd="14dp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Status SELinux"
+                                android:textColor="@color/colorOnSurface"
+                                android:textSize="15sp"
+                                android:layout_marginBottom="4dp" />
+
+                            <TextView
+                                android:id="@+id/text_selinux"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="@color/colorSurface"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lampiran"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_card_dark"
+                    android:padding="16dp"
+                    android:layout_marginTop="10dp"
+                    android:elevation="4dp"
+                    android:clickable="true" 
+                    android:foreground="?attr/selectableItemBackground"> 
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Description"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorOnSurface"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="WebSu Plus will be an alternative bridge for people who want to create WebUI-based scripts (HTML, CSS, and JS). "
+                        android:textSize="13sp"
+                        android:textColor="@color/colorSurface"
+                        android:layout_marginTop="3dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/support"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_card_dark"
+                    android:padding="16dp"
+                    android:layout_marginTop="10dp"
+                    android:elevation="4dp"
+                    android:clickable="true" 
+                    android:foreground="?attr/selectableItemBackground">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Support Me"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorOnSurface"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="WebSu Plus is, and always will be,\nfree for you, and everyone. You can however show me that you care by making a donation."
+                        android:textSize="13sp"
+                        android:textColor="@color/colorSurface"
+                        android:layout_marginTop="3dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Learn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_card_dark"
+                    android:padding="16dp"
+                    android:layout_marginTop="10dp"
+                    android:elevation="4dp"
+                    android:clickable="true" 
+                    android:foreground="?attr/selectableItemBackground"> 
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Learn WebSu Plus "
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorOnSurface"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Learn how to use WebSu Plus and its WebUI. "
+                        android:textSize="13sp"
+                        android:textColor="@color/colorSurface"
+                        android:layout_marginTop="3dp"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</FrameLayout>
+

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/colorBackground"
+    android:padding="0dp"
+    android:id="@+id/module_container">
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@android:color/transparent"
+        android:layout_height="47dp"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:paddingEnd="28dp"
+        android:textSize="24sp"
+        android:textColor="@color/text_primary"
+        android:paddingStart="28dp"
+        android:id="@+id/title_text"
+        android:layout_gravity="top|start"
+        android:text="Plugin WebSu"
+        android:layout_marginTop="43dp" 
+        android:paddingTop="0dp" />
+
+    <ImageButton
+        android:layout_height="30dp"
+        android:layout_width="30dp"
+        android:layout_marginEnd="20dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_bar"
+        android:contentDescription="Menu lainnya"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:elevation="6dp"
+        android:tint="@color/colorOnSurface"
+        android:layout_marginTop="42dp" 
+        android:id="@+id/btn_pilihan"
+        android:layout_gravity="top|end" />
+
+    <TextView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:visibility="visible"
+        android:padding="0dp"
+        android:textSize="14sp"
+        android:textColor="@color/text_primary"
+        android:layout_marginTop="92dp"
+        android:layout_gravity="fill"
+        android:gravity="center"
+        android:background="@color/colorBackground"
+        android:layout_margin="0dp"
+        android:id="@+id/text_no_webui"
+        android:text="No WebUI Plugin Installed"
+        android:textStyle="bold" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="88dp"
+        android:id="@+id/swipe_refresh_webui">
+
+        <ScrollView
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:paddingEnd="16dp"
+            android:scrollbarStyle="outsideOverlay"
+            android:paddingBottom="100dp"
+            android:clipToPadding="false"
+            android:paddingStart="16dp"
+            android:id="@+id/scroll_module_list">
+
+            <LinearLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:background="@android:color/transparent"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:id="@+id/module_list_layout"
+                android:paddingTop="10dp">
+
+            </LinearLayout>
+        </ScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <Button
+        android:layout_height="38dp"
+        android:layout_width="38dp"
+        android:drawablePadding="0dp"
+        android:layout_marginEnd="37dp"
+        android:elevation="8dp"
+        android:padding="8dp"
+        android:textColor="@color/colorOnSurface"
+        android:minWidth="0dp"
+        android:drawableTop="@drawable/ic_fire_white"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="172dp"
+        android:background="@drawable/bg_redmit"
+        android:minHeight="0dp"
+        android:id="@+id/btn_reset_webui"
+        android:visibility="gone"/>
+
+    <Button
+        android:layout_height="55dp"
+        android:layout_width="55dp"
+        android:layout_marginBottom="110dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/cubus_bg"
+        android:elevation="8dp"
+        android:textSize="25sp"
+        android:textColor="#FF2F105C"
+        android:id="@+id/btn_open_file"
+        android:text="+"
+        android:layout_gravity="bottom|end" />
+</FrameLayout>
+

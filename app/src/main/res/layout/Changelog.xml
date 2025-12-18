@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+    android:fitsSystemWindows="true"
+	android:background="@drawable/backgorund"
+	android:paddingTop="8dp"
+	android:padding="20dp">
+
+	<View
+		android:layout_width="32dp"
+		android:layout_height="4dp"
+		android:layout_gravity="center_horizontal"
+		android:layout_marginTop="8dp"
+		android:background="@color/text_primary"
+		android:layout_marginBottom="16dp"/>
+
+	<TextView
+		android:id="@+id/dialog_title"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="Changelog"
+		android:textSize="22sp"
+		android:textColor="@color/label"
+		android:textStyle="bold"
+		android:layout_marginBottom="20dp"/>
+
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="20dp"
+		android:maxHeight="300dp">
+
+		<TextView
+			android:id="@+id/changelog_content"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textSize="14sp"
+			android:textColor="@color/label"
+			android:text=""
+			android:autoLink="web"
+			android:linksClickable="true"/>
+
+	</ScrollView>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:gravity="end">
+
+		<Button
+			android:id="@+id/btn_dismiss"
+			android:layout_width="wrap_content"
+			android:layout_height="40dp"
+			android:text="Cancel"
+			android:textAllCaps="false"
+			android:textColor="#FF5484A6"
+			android:background="@android:color/transparent"
+			android:layout_marginEnd="5dp"
+			android:minWidth="0dp"
+			android:minHeight="0dp"
+			android:paddingStart="16dp"
+			android:paddingEnd="16dp"/>
+
+		<Button
+			android:id="@+id/btn_up"
+			android:layout_width="wrap_content"
+			android:layout_height="40dp"
+			android:text="Update"
+			android:textAllCaps="false"
+			android:textColor="#F1F1F1"
+			android:paddingStart="16dp"
+			android:paddingEnd="16dp"
+			android:minWidth="0dp"
+			android:minHeight="0dp"
+			android:stateListAnimator="@null"
+			android:background="@drawable/upbackgorund"/>
+
+	</LinearLayout>
+</LinearLayout>
+

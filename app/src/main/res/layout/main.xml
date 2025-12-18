@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_height="match_parent"
+     android:layout_width="match_parent"
+     android:background="@color/colorBackground"
+     android:id="@+id/root_layout">
+
+    <FrameLayout
+         android:layout_height="match_parent"
+         android:layout_width="match_parent"
+         android:background="@color/colorBackground"
+         android:id="@+id/content_frame">
+
+    </FrameLayout>
+
+    <LinearLayout
+         android:layout_height="66dp"
+         android:layout_width="match_parent"
+         android:elevation="12dp"
+         android:orientation="horizontal"
+         android:layout_gravity="bottom"
+         android:layout_marginBottom="25dp"
+         android:background="@drawable/ovall_card"
+         android:gravity="center"
+         android:layout_marginHorizontal="28dp"
+         android:paddingVertical="6dp"
+         android:clipToOutline="true"
+         android:paddingHorizontal="10dp"
+         android:id="@+id/bottom_nav">
+
+        <LinearLayout
+             android:layout_height="match_parent"
+             android:layout_width="0dp"
+             android:gravity="center"
+             android:orientation="vertical"
+             android:layout_weight="1"
+             android:id="@+id/nav_home">
+
+            <LinearLayout
+                 android:layout_height="32dp"
+                 android:layout_width="70dp"
+                 android:layout_marginBottom="2dp"
+                 android:gravity="center"
+                 android:background="@drawable/bg_nav_active"
+                 android:orientation="vertical"
+                 android:id="@+id/nav_home_icon_wrapper">
+
+                <ImageView
+                     android:layout_height="24dp"
+                     android:layout_width="24dp"
+                     android:src="@drawable/ic_home"
+                     android:tint="@color/keyTerminal"
+                     android:id="@+id/nav_home_icon" />
+
+            </LinearLayout>
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:textSize="12sp"
+                 android:textColor="@color/colorOnPrimary"
+                 android:id="@+id/nav_home_text"
+                 android:text="Home"
+                 android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+             android:layout_height="match_parent"
+             android:layout_width="0dp"
+             android:gravity="center"
+             android:orientation="vertical"
+             android:layout_weight="1"
+             android:id="@+id/nav_webui">
+
+            <LinearLayout
+                 android:layout_height="32dp"
+                 android:layout_width="70dp"
+                 android:layout_marginBottom="2dp"
+                 android:gravity="center"
+                 android:background="@android:color/transparent"
+                 android:orientation="vertical"
+                 android:id="@+id/nav_webui_icon_wrapper">
+
+                <ImageView
+                     android:layout_height="24dp"
+                     android:layout_width="24dp"
+                     android:src="@drawable/ic_web"
+                     android:tint="@color/keyTerminal"
+                     android:id="@+id/nav_webui_icon" />
+
+            </LinearLayout>
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:textSize="12sp"
+                 android:textColor="@color/colorOnPrimary"
+                 android:id="@+id/nav_webui_text"
+                 android:text="Webui"
+                 android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+             android:layout_height="match_parent"
+             android:layout_width="0dp"
+             android:gravity="center"
+             android:orientation="vertical"
+             android:layout_weight="1"
+             android:id="@+id/nav_settings">
+
+            <LinearLayout
+                 android:layout_height="32dp"
+                 android:layout_width="70dp"
+                 android:layout_marginBottom="2dp"
+                 android:gravity="center"
+                 android:background="@android:color/transparent"
+                 android:orientation="vertical"
+                 android:id="@+id/nav_settings_icon_wrapper">
+
+                <ImageView
+                     android:layout_height="24dp"
+                     android:layout_width="24dp"
+                     android:src="@drawable/ic_settings"
+                     android:tint="@color/keyTerminal"
+                     android:id="@+id/nav_settings_icon" />
+
+            </LinearLayout>
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:textSize="12sp"
+                 android:textColor="@color/colorOnPrimary"
+                 android:id="@+id/nav_settings_text"
+                 android:text="Settings"
+                 android:textStyle="bold" />
+
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
