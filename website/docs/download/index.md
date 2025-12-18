@@ -12,7 +12,8 @@ description: "Unduh versi terbaru WebSu Plus di sini"
 - Webui medukung offline and online
 
 ## Download
-::: info - [Download](https://github.com/Rem01Gaming/encore/releases/tag/4.6)
+::: info sponsor
+- [Download](https://github.com/Rem01Gaming/encore/releases/tag/4.6)
 - [Telegram Channel](https://t.me/Yeye_PID)
 - [Support Me](https://saweria.co/Uniccc)
 :::
