@@ -1,4 +1,4 @@
-# Technical Reference: QuickTerminalActivity
+# Technical Reference
 
 `QuickTerminalActivity` is the core execution engine of WebSu Plus, responsible for bridging user input with low-level system processes. It manages terminal emulation, real-time logging, and cross-environment command execution.
 
