@@ -26,7 +26,7 @@ features:
   - icon: 💻
     title: Terminal Executor
     details: Eksekusi perintah shell secara instan langsung dari aplikasi dengan deteksi otomatis mode ADB (Non-Root) dan Root universal.
-    link: /plugin/Termina
+    link: /plugin/Terminal
   
   - icon: 🌐
     title: Plugin WebUI
