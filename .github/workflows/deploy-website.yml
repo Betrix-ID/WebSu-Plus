@@ -9,31 +9,24 @@ on:
       - "website/**"
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   group: pages
   cancel-in-progress: false
 
 jobs:
-  # Build job
   build:
     name: Build Website
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./website
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Not needed if lastUpdated is not enabled
+          fetch-depth: 0 
 
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
@@ -42,19 +35,22 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Install dependencies
-        run: bun install
+        # Kita masuk ke folder website dulu untuk install
+        run: cd website && bun install
 
       - name: Build with VitePress
+        # Kita masuk ke folder website untuk menjalankan script 'build'
         run: |
+          cd website
           bun run build
           touch docs/.vitepress/dist/.nojekyll
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
+          # Path absolut dari root repository ke hasil build
           path: website/docs/.vitepress/dist
 
-  # Deployment job
   deploy:
     name: Deploy Website
     needs: build
