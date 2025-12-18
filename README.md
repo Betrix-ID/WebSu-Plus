@@ -1,34 +1,52 @@
-> ![git big](/img/Loopsu.png
+# WebSu Plus (WebPlus)
 
-# WebSu Plus (WebPlus) belum final
-> [!NOTES]
-> Hai! Proyek ini masih dalam tahap pengembangan awal. Saya sedang belajar dan bereksperimen sambil membangunnya, jadi mungkin ada beberapa hal yang belum lengkap atau bisa berubah di kemudian hari.
-Terima kasih telah melihatnya!
+![WebSu Plus Banner](/img/Loopsu.png)
 
-**WebSu Plus** adalah aplikasi yang dirancang untuk memberikan kontrol lebih mendalam terhadap sistem dan webui
-Tidak seperti Aplikasi Plugin webui lain nya berfokus kepada root permision **WebSu Plus** menghadirkan Plugin WebUi universal atau dengan kata lain bisa digukan (root maupun unroot). [Pelajari lebih lanjut](https://betrix-id.github.io/WebSu-Plus/)
+> [!CAUTION]
+> **Development Status**: This project is in its early experimental phase. Features and system architectures are subject to significant changes as the project evolves.
 
-> [!TIP]
->
-> Feature:
->
-> 🃏 Terminal Executor (root dan unroot)
->      *Jalankan Perintah langsung dari aplikasi*
->      
->      - Medukung ADB (root) / ADB shell (unroot)
->      - compobility BusyBox v1.36.1.1 yang sudah lengkap
->      - [Pelajari Lebih Lanjut](https://betrix-id.github.io/WebSu-Plus/plugin/Terminal.html)
->
->  🌐 Plugin WebSu (Module Webui) --> Root / unroot
->         *Jalankan langsung module webui dari aplikasi
->     
->       - Di dukung JavaScript (root /unroot)
->       - Dukungan API JavaScript yang hampir universal
->       - [Pelajari Lebih lanjut](https://betrix-id.github.io/WebSu-Plus/plugin/Pugin-websu.html)
+**WebSu Plus** is a versatile Android management platform designed to provide deep system control through a modern WebUI. Unlike traditional module managers that require mandatory root access, WebSu Plus introduces a **Universal Framework** that supports both **Rooted** and **Non-Rooted** environments seamlessly.
 
-> [!WARNING]
-> Kontribusi sangat kami harapkan!
-> Jangan ragu untuk membuka issue , mengirimkan pull request , atau memulai diskusi untuk ide dan perbaikan baru.
+[**Read the Documentation**](https://betrix-id.github.io/WebSu-Plus/)
+
+---
+
+## 🚀 Key Features
+
+### 💻 Terminal Executor (Hybrid Support)
+A high-performance command execution engine tailored for Android power users.
+* **Smart Routing**: Automatically detects and switches between **ADB (Root)** and **ADB Shell (Non-Root/Shizuku)**.
+* **Pre-compiled BusyBox**: Includes **BusyBox v1.36.1**, ensuring a consistent and powerful command-set across all devices.
+* [Learn more about Terminal](https://betrix-id.github.io/WebSu-Plus/guide/Terminal.html)
+
+### 🌐 WebSu Plugin (Universal WebUI)
+Deploy and interact with system modules using standard web technologies.
+* **Unified Bridge**: Built-in JavaScript API that works across both Root and Non-Rooted states.
+* **Extensible Architecture**: Build advanced system dashboards using HTML, CSS, and JavaScript.
+* [Learn more about Plugins](https://betrix-id.github.io/WebSu-Plus/plugin/Pugin-websu.html)
+
+---
+
+## 🛠 Compatibility
+
+| Environment | Authorization Provider | Status |
+| :--- | :--- | :--- |
+| **Rooted** | Magisk, KernelSU, APatch | Full Support |
+| **Non-Rooted** | Shizuku / ADB Service | Supported |
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions from the community to help improve the WebSu Plus ecosystem!
+* **Issues**: Report bugs or technical inconsistencies.
+* **Discussions**: Propose new features or experimental ideas.
+* **Pull Requests**: Submit code improvements directly to the repository.
+
+---
+
+## License & Disclaimer
+WebSu Plus is an open-source experiment. Use at your own risk. We are not responsible for any data loss or system instability caused by custom modules.
 
 <div align="center">
   If you like my work, please follow me or star my work on GitHub
