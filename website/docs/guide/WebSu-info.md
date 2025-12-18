@@ -1,37 +1,36 @@
 # WebSu Plus (WebPlus)
 
-### *Bridging the Gap Between Web Modules and System Control*
+### *Bridging the Gap Between Web Technologies and System Operations*
 
-**WebSu Plus** adalah platform eksperimental terbuka yang dirancang untuk membangun dan menjalankan **modul berbasis web** di ekosistem Android. Kami hadir untuk mendobrak batasan kaku antara pengguna biasa dan kontrol sistem tingkat lanjut.
+**WebSu Plus** is an open-source experimental platform engineered to develop and execute **web-based modules** within the Android ecosystem. The project aims to eliminate the rigid boundaries between standard user interfaces and advanced system-level control.
 
-## 💡 Mengapa WebSu Plus?
+## Vision and Purpose
 
-::: tip Kebanyakan aplikasi "Web Manager" di Android mewajibkan akses Root. Hal ini sering menjadi penghalang bagi pengguna 
-yang ingin kustomisasi lebih namun tidak ingin mengambil risiko "rooting".
+::: tip Technical Insight
+While traditional Android system managers often mandate Root access, WebSu Plus provides a versatile alternative for users who require advanced customization without the security implications of permanent rooting.
 :::
 
-**WebSu Plus hadir sebagai solusi:**
-* **Akses Hybrid:** Menggunakan izin ADB/Shizuku sebagai pengganti peran Super User, namun tetap mendukung Root penuh bagi yang memilikinya.
-* **Low Barrier to Entry:** Dirancang dengan antarmuka yang intuitif sehingga orang awam bisa langsung mulai tanpa harus belajar teknis yang rumit.
-* **Universal Command:** Menawarkan kontrol sistem yang konsisten di berbagai jenis perangkat.
+**The WebSu Plus Solution:**
+* **Hybrid Access Model:** Leverages ADB and Shizuku permissions as an alternative to Superuser privileges, while maintaining comprehensive support for rooted environments.
+* **Streamlined Accessibility:** Designed with an intuitive interface to lower the barrier to entry for users, regardless of their technical expertise.
+* **Unified Command Structure:** Delivers consistent system control and execution across diverse device architectures.
 
-## ✨ Fitur Utama
+## Core Capabilities
 
-* **Universal Terminal Executor:** Jalankan perintah terminal langsung dari aplikasi. Mendukung deteksi otomatis antara mode *root* dan *unroot*.
-* **WebUI Plugin System:** Ekosistem modul berbasis web dengan dukungan API JavaScript universal. Bangun antarmuka kontrol Anda sendiri dengan teknologi web.
-* **Multi-Provider Support:** Terintegrasi penuh dengan akses pihak ketiga seperti **Magisk, KernelSU, APatch (Sukisu),** dan **Shizuku**.
-* **Third-Party Plugin Friendly:** Mendukung eksekutor terminal universal dan plugin dari pengembang lain.
+* **Universal Terminal Executor:** Facilitates direct terminal command execution within the application. Features intelligent environment detection to automatically toggle between privileged and non-privileged modes.
+* **WebUI Plugin Architecture:** A robust ecosystem for web-based modules powered by a universal JavaScript API. This allows developers to construct sophisticated control interfaces using standard web technologies.
+* **Comprehensive Provider Integration:** Fully compatible with leading authorization providers, including **Magisk, KernelSU, APatch (Sukisu),** and **Shizuku**.
+* **Extensible Ecosystem:** Architected to support third-party terminal executors and community-developed plugins.
 
-## 🛠️ Kompatibilitas Sistem
+## System Compatibility
 
-WebSu Plus dirancang untuk fleksibilitas maksimal:
-* - **Tanpa Root:** Menggunakan bantuan **Shizuku** atau ADB.
-* - **Dengan Root:** Performa maksimal melalui **Magisk** atau **KernelSU**.
-* - **Universal:** Berjalan pada berbagai versi Android dengan API yang stabil.
+WebSu Plus is engineered for maximum architectural flexibility:
+* **Non-Root Environments:** Operational via **Shizuku** or ADB service bridging.
+* **Rooted Environments:** Optimized for peak performance through **Magisk**, **KernelSU**, or **APatch**.
+* **Universal Support:** Maintains stability across multiple Android versions through consistent API implementation.
 
-## 🌱 Masa Depan & Keberlanjutan
+## Development Roadmap
 
-WebSu Plus adalah proyek yang terus tumbuh. Kami akan terus bereksperimen dengan segala kemungkinan baru di Android untuk memastikan aplikasi ini tetap relevan, ringan, dan bertenaga bagi semua pengguna.
+WebSu Plus is a dynamic, evolving project. Our commitment is to continuously explore emerging Android capabilities to ensure the platform remains lightweight, high-performance, and accessible to the global developer community.
 
-> **Eksperimen Tanpa Batas.** Kendalikan perangkat Anda dengan cara yang lebih modern, sederhana, dan terbuka.
-
+> **Limitless Experimentation.** Manage your device through a modern, simplified, and open-source framework.
