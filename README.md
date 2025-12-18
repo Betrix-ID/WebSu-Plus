@@ -17,7 +17,7 @@
 A high-performance command execution engine tailored for Android power users.
 * **Smart Routing**: Automatically detects and switches between **ADB (Root)** and **ADB Shell (Non-Root/Shizuku)**.
 * **Pre-compiled BusyBox**: Includes **BusyBox v1.36.1**, ensuring a consistent and powerful command-set across all devices.
-* [Learn more about Terminal](https://betrix-id.github.io/WebSu-Plus/guide/Terminal.html)
+* [Learn more about Terminal](https://betrix-id.github.io/WebSu-Plus/plugin/Terminal.html)
 
 ### 🌐 WebSu Plugin (Universal WebUI)
 Deploy and interact with system modules using standard web technologies.
