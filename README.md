@@ -1,4 +1,4 @@
-> ![WebSu Plus](/img/Loopsu.png)
+> ![WebSu Plus](/img/20251205_164549.png)
 
 # WebSu Plus (WebPlus)
 
