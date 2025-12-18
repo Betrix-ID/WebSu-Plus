@@ -6,7 +6,8 @@
 
 ## 💡 Mengapa WebSu Plus?
 
-::: Kebanyakan aplikasi "Web Manager" di Android mewajibkan akses Root. Hal ini sering menjadi penghalang bagi pengguna yang ingin kustomisasi lebih namun tidak ingin mengambil risiko "rooting".
+::: Kebanyakan aplikasi "Web Manager" di Android mewajibkan akses Root. Hal ini sering menjadi penghalang bagi pengguna 
+yang ingin kustomisasi lebih namun tidak ingin mengambil risiko "rooting".
 :::
 
 **WebSu Plus hadir sebagai solusi:**
