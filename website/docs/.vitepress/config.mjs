@@ -1,22 +1,25 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  // WAJIB: Sesuai nama repository di GitHub
+  // WAJIB: Sesuai nama repository di GitHub agar CSS/Aset tidak error
   base: '/WebSu-Plus/', 
   
   title: "WebSu Plus",
   description: "Platform Modul Berbasis WebUI",
   
   themeConfig: {
-    // VitePress mencari ini di website/docs/public/logo.png
+    // Pastikan logo berada di website/docs/public/logo.png
     logo: '/logo.png',
 
+    // Navigasi Bar Atas
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Informasi', link: '/guide/WebSu-info' },
-      { text: 'Plugin', link: '/plugin/Pugin-websu' }
+      { text: 'Plugin', link: '/plugin/Pugin-websu' },
+      { text: 'Terminal', link: '/guide/Terminal' } // Menambahkan link Terminal di atas
     ],
 
+    // Sidebar Samping
     sidebar: [
       {
         text: '📖 Panduan Dasar',
@@ -30,6 +33,12 @@ export default defineConfig({
         items: [
           { text: 'Plugin WebSu', link: '/plugin/Pugin-websu' },
         ]
+      },
+      {
+        text: '💻 Referensi Teknis',
+        items: [
+          { text: 'Quick Terminal', link: '/guide/Terminal' } // Menambahkan link ke Terminal.md
+        ]
       }
     ],
 
@@ -40,6 +49,11 @@ export default defineConfig({
     footer: {
       message: 'Aplikasi Khusus Modul WebUI (Root & Unroot).',
       copyright: 'Copyright © 2025 WebSu Plus'
+    },
+
+    // Fitur pencarian lokal
+    search: {
+      provider: 'local'
     }
   }
 })
