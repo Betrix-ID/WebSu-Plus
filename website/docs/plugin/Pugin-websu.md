@@ -1,106 +1,61 @@
-# Plugin WebSu (Webui root and unroot)
+# WebSu Plugin Architecture (Root & Non-Root)
 
 ::: info
-kenali Plugin WebSu tanpan batasan izin bagi root dan batasan untuk unroot
+WebSu Plugins provide a unified framework that bridges the gap between high-privilege Root environments and restricted Non-Root (Shizuku/ADB) environments.
 :::
 
-## Apa itu Plugin WebSu.?
+## Overview
 
-Plugin WebSu dibangun di atas arsitektur yang sama dengan Plugin Webui root, ini bukan di maksudkan sebagai penganti, melainkan sebagai feature tambahan bagi **WebSu Plus** yang memperkenankan Plugin webui tanpa root di dalam **WebSu Plus**
+The WebSu Plugin system is engineered upon the established architecture of traditional Root WebUI modules. Rather than serving as a replacement, it functions as an evolutionary extension for the **WebSu Plus** ecosystem. 
 
-Pada tahap ini, gagasan tersebut berfungsi sebagai eksplorasi awal: memperluas fondasi modul akar ke dalam bentuk yang dapat beroperasi tanpa akses akar, sambil tetap menjadi bagian dari kerangka kerja modular yang sama.
+This framework allows WebUI plugins to operate seamlessly without requiring root access by leveraging a modular integration layer. This approach ensures a consistent developer experience, allowing the same codebase to balance functionality across rooted and unrooted device states.
 
-Di masa depan, pendekatan ini dapat dikembangkan lebih lanjut untuk menyediakan fungsionalitas yang lebih luas dan kasus penggunaan baru, menyeimbangkan antara lingkungan yang berakar (rooted) dan tidak berakar (unrooted).
+## Technical Specifications & Integration
 
-### Dukungan 
+### JavaScript API Support
+WebSu Plugins feature a near-universal JavaScript API integration. This includes support for both online and offline KernelSU environments. The API operates atop a robust abstraction layer that intelligently routes commands through either **ADB Shell** or **Root** interfaces based on the available authorization.
 
-Plugin WebSu sudah di dukung API JavaScript yang hampir universal plus sudah include kernelsu online dan offline, API JavaSript bekerja di atas dukungan ADB shell dan Root 
+### BusyBox Environment
+The platform includes a comprehensive BusyBox binary available for both root and non-root users.
+* **Binary Path:** `/data/user_de/0/com.android.shell/WebSu/sbin/busybox`
+* **Standalone Shell Mode:** Supports `ASH` Standalone Mode, which can be toggled at runtime. When active, commands (e.g., `ls`, `rm`, `chmod`) will prioritize internal BusyBox applets over default Android system binaries (Toybox). This ensures environment predictability across various Android versions and OEM distributions.
 
-Pada tahap ini user sudah bebas melakukan pengexecutian command shell dan root secara bersamaan 
+## Directory Structure
 
-Plugin WebSu juga udah di dukung BusyBox yang sangat lengkap bagi user root dan unroot, files yang dapat di execute terletak `/data/user_de/0/com.android.shell/WebSu/sbin/busybox` 
-BusyBox mendukung `ASH` Standalone Shell Mode" yang dapat diaktifkan/dinonaktifkan saat runtime. Yang dimaksud dengan Standalone Mode ini adalah bahwa ketika dijalankan di shell ash BusyBox, setiap perintah akan langsung menggunakan applet di dalam BusyBox, terlepas dari apa yang diatur sebagai `PATH`. Misalnya, perintah seperti `ls`, `rm`, **TIDAK** `chmod` akan menggunakan apa yang ada di `PATH` (dalam kasus Android secara default akan menjadi , , dan masing-masing), tetapi akan langsung memanggil applet internal BusyBox. Ini memastikan bahwa skrip selalu berjalan di lingkungan yang dapat diprediksi dan selalu memiliki rangkaian perintah lengkap terlepas dari versi Android mana yang dijalankan. Untuk memaksa perintah agar tidak menggunakan BusyBox, Anda harus memanggil file yang dapat dieksekusi dengan jalur lengkap. `/system/bin/ls` `/system/bin/rm` `/system/bin/chmod`
+The standard deployment path for plugins is located at `/data/user_de/0/com.android.shell/WebSu/webui`. Modules must adhere to the following hierarchy:
 
-### Plugin WebSu
-Folder plugin AxManager ditempatkan `/data/user_de/0/com.android.shell/WebSu/webui` dengan struktur seperti di bawah ini:
+```text
+/data/user_de/0/com.android.shell/WebSu/webui
+└── $MOPATH/                 <-- Named after the unique Module ID
+    ├── module.prop          <-- Mandatory metadata file
+    ├── Amber.sh             <-- Optional customization script (Replaces customize.sh)
+    ├── lossy.sh             <-- Late-start boot service script (Replaces service.sh)
+    ├── uninstall.sh         <-- Cleanup script executed upon module removal
+    ├── webroot/
+    │   └── index.html       <-- Primary WebUI entry point
+    └── system/
+        └── sbin/            <-- Directory for executable binary tools
 
-```
-  /data/user_de/0/com.android.shell/WebSu/webui
-  
-  $MOPATH          <---   Folder tersebut diberi nama sesuai dengan ID modul. 
-  |
-  |      *** Identitas Modul *** 
-  |
-  |---- module.prop  <---  File ini menyimpan metadata modul. 
-  |
-  |     *** Daftar Isi Utama ***
-  |
-  |---- /webroot/index.html  <--- Folder untuk membangun plugin webui
-  |
-  |     *** Daftar tools folder **
-  |
-  |---- /system/sbin        <--- Folder tools executi files banery
-  |
-  |     *** customize.sh diganti dengan Amber.sh ***
-  |
-  |---- Amber.sh           <--- (Opsional, detail selengkapnya nanti) 
-  |
-  |
-  |      *** service.sh di ganti dengan lossy.sh ***
-  |
-  |---- lossy.sh             <--- Files Skrip ini akan dieksekusi dalam layanan late_start BOOT_COMPLETED. 
-  |---- uninstall.sh          <--- Skrip ini akan dieksekusi ketika WebSu Plus menghapus modul Anda. 
-  |
-  |         ,* File-file modul lainnya *,
-  |______ ,,,
-```
-
-### module.prop
-
-module.prop is a configuration file for a module. In AxManager, if a module doesn't contain this file, it won't be recognized as a module. The format of this file is as follows:
-
-```prop{7}
+Metadata Configuration (module.prop)
+The module.prop file is the primary identification document for a module. Modules missing this file will not be recognized by the system.
+Required Schema:
 id=<string>
 name=<string>
 version=<string>
 versionCode=<int>
 author=<string>
 description=<string>
-```
-- `id` has to match this regular expression: `^[a-zA-Z][a-zA-Z0-9._-]+$`
-  Example: ✓ `a_module`, ✓ `a.module`, ✓ `module-101`, ✗ `a module`, ✗ `1_module`, ✗ `-a-module`
-  This is the **unique identifier** of your module. You should not change it once published.
-- `versionCode` has to be an **integer**. This is used to compare versions.
-- Others that were not mentioned above can be any **single line string.**
-- Make sure to use the `UNIX (LF)` line break type and not the `Windows (CR+LF)` or `Macintosh (CR)`.
 
-### Penginstallan Plugin
-
-Installer plugin WebSu Plus adalah root modul yang dikemas dalam file ZIP yang dapat diinstal di WebSu Plus. Installer plugin WebSu Plus yang paling sederhana hanyalah sebuah root modul yang dikemas sebagai file ZIP.
-
-### Fungsi
-
-```
-ui_print <msg>
-    print <msg> to console
-    Avoid using 'echo' as it will not display in custom recovery's console
-
-abort <msg>
-    print error message <msg> to console and terminate the installation
-    Avoid using 'exit' as it will skip the termination cleanup steps
-
-set_perm <target> <owner> <group> <permission> [context]
-    if [context] is not set, the default is "u:object_r:system_file:s0"
-    this function is a shorthand for the following commands:
-       chown owner.group target
-       chmod permission target
-       chcon context target
-
-set_perm_recursive <directory> <owner> <group> <dirpermission> <filepermission> [context]
-    if [context] is not set, the default is "u:object_r:system_file:s0"
-    for all files in <directory>, it will call:
-       set_perm file owner group filepermission context
-    for all directories in <directory> (including itself), it will call:
-       set_perm dir owner group dirpermission context
-```
- 
+ * id: Must follow the regex ^[a-zA-Z][a-zA-Z0-9._-]+$. This unique identifier must remain constant once the module is published.
+ * versionCode: Must be an integer for version comparison logic.
+ * Encoding: Must use UNIX (LF) line endings. Windows (CR+LF) or Macintosh (CR) formats will cause execution failures.
+Plugin Installation & Deployment
+WebSu Plus plugins are packaged as standard ZIP archives. The installer logic follows the Root Module convention, ensuring compatibility with existing developer workflows while enabling deployment via the WebSu Plus interface.
+Core Installation Functions
+The following internal functions are available during the installation process:
+| Function | Description |
+|---|---|
+| ui_print <msg> | Outputs a message to the installation console. Use this instead of echo. |
+| abort <msg> | Terminals the installation and displays an error message. Ensures proper cleanup. |
+| set_perm <target> <owner> <grp> <perm> [ctx] | Sets ownership, permissions, and SELinux context for a specific file. |
+| set_perm_recursive <dir> <own> <grp> <dper> <fper> [ctx] | Recursively applies permissions to a directory and its contents. |
