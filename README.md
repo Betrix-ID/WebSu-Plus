@@ -1,6 +1,6 @@
-# WebSu Plus (WebPlus)
+> ![WebSu Plus Banner](/img/Loopsu.png)
 
-![WebSu Plus Banner](/img/Loopsu.png)
+# WebSu Plus (WebPlus)
 
 > [!CAUTION]
 > **Development Status**: This project is in its early experimental phase. Features and system architectures are subject to significant changes as the project evolves.
