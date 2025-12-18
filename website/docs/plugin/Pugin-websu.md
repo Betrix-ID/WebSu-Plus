@@ -1,4 +1,3 @@
-Berikut adalah kode Markdown yang sudah dirapikan dan siap Anda copy-paste langsung ke file Pugin-websu.md:
 # WebSu Plugin Architecture (Root & Non-Root)
 
 ::: info
