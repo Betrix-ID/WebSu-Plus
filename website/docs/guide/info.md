@@ -1,52 +1,53 @@
 # WebSu Plus Documentation
 
-Selamat datang di dokumentasi resmi **WebSu Plus (WebPlus)**. WebSu Plus adalah platform eksperimental untuk menjalankan modul berbasis WebUI dengan fleksibilitas akses sistem di Android.
+Welcome to the official documentation for **WebSu Plus (WebPlus)**. This platform provides a robust framework for managing and executing web-based system modules on Android devices.
 
-## 🏗️ Getting Started
+## Authorization Methods
 
-Pilih metode otorisasi yang sesuai dengan status perangkat Anda. WebSu Plus dirancang untuk tetap bertenaga baik dalam kondisi **Root** maupun **Non-Root**.
+WebSu Plus offers two primary methods for system interaction. Choose the method that best aligns with your device's configuration.
 
-### 1. Akses Root (Recommended)
-Untuk pengguna yang menginginkan performa penuh dan kendali sistem total.
+### 1. Root Access (High Privilege)
+Recommended for users seeking complete system control and maximum performance.
 
-::: info PROSES OTORISASI
-Cukup buka aplikasi WebSu Plus, lalu berikan izin saat jendela pop-up Superuser muncul dari salah satu manager berikut:
+::: info AUTHORIZATION PROCESS
+WebSu Plus is compatible with the following Superuser managers:
 * **Magisk**
 * **KernelSU**
 * **APatch (Sukisu)**
+
+Upon launching the application, grant the requested Superuser permissions when the system prompt appears.
 :::
 
-### 2. Akses Shizuku (Non-Root)
-Solusi cerdas bagi Anda yang ingin menggunakan modul sistem tanpa melakukan modifikasi permanen (Root) pada perangkat.
+### 2. Shizuku Integration (Non-Root)
+A sophisticated solution for users who prefer system-level capabilities without permanent root modifications.
 
-**Langkah-langkah Aktivasi:**
-1. **Setup Shizuku:** Pastikan layanan Shizuku sudah berstatus *Running*. Jika belum, ikuti [Panduan Setup Shizuku](https://shizuku.rikka.app/guide/setup/).
-2. **Otorisasi Aplikasi:**
-   * Buka aplikasi **Shizuku Manager**.
-   * Pilih menu **Authorized Applications**.
-   * Cari **WebSu Plus** dan aktifkan *toggle* ke posisi **ON**.
-3. **Mulai:** Kembali ke WebSu Plus dan aplikasi siap digunakan.
+**Deployment Steps:**
+1. **Service Initialization:** Ensure the Shizuku service is active. Refer to the [Official Shizuku Setup Guide](https://shizuku.rikka.app/guide/setup/) for detailed instructions.
+2. **Application Authorization:**
+   * Open the **Shizuku Manager**.
+   * Navigate to **Authorized Applications**.
+   * Locate **WebSu Plus** and enable the authorization toggle.
+3. **Verification:** Return to WebSu Plus to confirm the interface is operational.
 
-## 🛠️ Fitur Inti (Core Features)
+## Core Architecture
 
-### 💻 Terminal Executor
-WebSu Plus dilengkapi dengan executor universal yang mampu mengenali environment perangkat secara cerdas.
-* **Auto-detect:** Otomatis menyesuaikan perintah antara mode `root` dan `shell`.
-* **Universal Command:** Menjalankan script kustom langsung di dalam aplikasi.
+### Terminal Executor
+The platform includes a universal command executor designed for cross-environment compatibility.
+* **Intelligent Detection:** Automatically identifies and switches between `root` and `shell` environments.
+* **Execution Logs:** Provides real-time feedback for custom script execution.
 
-### 🌐 WebUI Module
-Mendukung modul yang dibangun dengan teknologi web (HTML/JS/CSS).
-* **JS API Support:** Integrasi API JavaScript yang memungkinkan modul web berinteraksi dengan sistem Android.
-* **UI Fleksibel:** Tampilan modul yang sepenuhnya bisa dikustomisasi oleh pengembang.
+### WebUI Module Framework
+WebSu Plus supports modules developed using standard web technologies.
+* **JavaScript API:** Provides a bridge between web modules and Android system APIs.
+* **Extensible UI:** Modules maintain full control over their visual presentation while adhering to the platform's execution security.
 
-## ❓ FAQ (Pertanyaan Sering Diajukan)
+## Frequently Asked Questions
 
-| Pertanyaan | Jawaban |
+| Question | Answer |
 | :--- | :--- |
-| **Apakah aman?** | Sangat aman. WebSu Plus adalah proyek open-source yang transparan. |
-| **Bisa jalan di Android versi berapa?** | WebSu Plus mendukung sebagian besar versi Android modern yang didukung oleh Shizuku/Root Manager terkait. |
-| **Kenapa modul tidak jalan?** | Pastikan izin (Root/Shizuku) sudah diberikan dan modul tersebut kompatibel dengan versi WebSu Plus Anda. |
+| **Security Status** | WebSu Plus is an open-source project, ensuring transparency in all system operations. |
+| **Compatibility** | Supports modern Android versions compatible with Shizuku and major Root managers. |
+| **Troubleshooting** | If a module fails to execute, verify authorization status and ensure the module is updated to the latest version. |
 
-## 🤝 Kontribusi & Dukungan
-WebSu Plus adalah proyek berkelanjutan. Kami sangat terbuka bagi para developer yang ingin bereksperimen atau melaporkan bug demi kemajuan ekosistem Android yang lebih terbuka.
-
+## Development & Support
+WebSu Plus is an evolving ecosystem. We encourage developers to contribute to the codebase, report technical issues, or propose new features to enhance the open Android environment.
