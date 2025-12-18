@@ -14,6 +14,7 @@ description: "Unduh versi terbaru WebSu Plus di sini"
 ## Download
 - [Download](https://github.com/Rem01Gaming/encore/releases/tag/4.6)
 - [Telegram Channel](https://t.me/Yeye_PID)
+- [Support Me](https://saweria.co/Uniccc)
 
 ::: tip Support our project
 Please consider support our project by not sharing direct module file
