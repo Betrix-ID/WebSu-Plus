@@ -1,17 +1,14 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  // WAJIB: Sesuai nama repository di GitHub agar CSS/Aset tidak error
   base: '/WebSu-Plus/', 
   
   title: "WebSu Plus",
   description: "Platform Modul Berbasis WebUI",
   
   themeConfig: {
-    // Pastikan logo berada di website/docs/public/logo.png
     logo: '/logo.png',
 
-    // Navigasi Bar Atas
     nav: [
       { text: 'Home', link: '/' },
       { text: 'guide', link: '/guide/WebSu-info' },
@@ -20,22 +17,16 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: '📖 Panduan Dasar',
+        text: 'Basic Guide',
         items: [
           { text: 'What is WebSu Plus? ', link: '/guide/WebSu-info' },
           { text: 'Permission Details (Root/Shizuku) ', link: '/guide/info' },
         ]
       },
       {
-        text: '🧩 Dokumentasi Plugin',
+        text: 'Plugin Documentation',
         items: [
           { text: 'Plugin WebSu', link: '/plugin/Pugin-websu' },
-        ]
-      },
-      {
-        text: '💻 Referensi Teknis',
-        items: [
-          { text: 'Quick Terminal', link: '/plugin/Terminal' } 
         ]
       }
     ],
