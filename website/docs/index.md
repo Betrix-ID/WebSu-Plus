@@ -2,12 +2,12 @@
 layout: home
 title: "WebSu Plus"
 titleTemplate: "Platform Modul Berbasis WebUI"
-description: "WebSu Plus adalah aplikasi inovatif untuk menjalankan modul pihak ketiga berbasis WebUI dengan dukungan Root (Magisk, KernelSU, APatch) dan Non-Root (Shizuku)."
+description: "WebSu Plus" adalah aplikasi inovatif untuk menjalankan modul pihak ketiga berbasis WebUI dengan dukungan Root (Magisk, KernelSU, APatch) dan Non-Root (Shizuku)."
 
 hero:
   name: "WebSu Plus"
-  text: "Solusi Modul WebUI Universal"
-  tagline: "Kontrol Sistem Tingkat Lanjut, Dengan atau Tanpa Root."
+  text: "Universal WebUI Module Solution "
+  tagline: "Advanced System Control, With or Without Root. "
   image:
     src: ./logo.png
     alt: WebSu Plus Logo
@@ -25,20 +25,19 @@ hero:
 features:
   - icon: 💻
     title: Terminal Executor
-    details: Eksekusi perintah shell secara instan langsung dari aplikasi dengan deteksi otomatis mode ADB (Non-Root) dan Root universal.
+    details: Instant shell command execution directly from the app with auto-detection of ADB (Non-Root) and universal Root modes. 
     link: /plugin/Terminal
   
   - icon: 🌐
     title: Plugin WebUI
-    details: Antarmuka interaktif berbasis web untuk mengontrol sistem. Mendukung API JavaScript universal yang kompatibel dengan berbagai environment.
+    details: A web-based interactive interface for controlling the system. Supports a universal JavaScript API that is compatible with various environments. 
     link: /plugin/Pugin-websu
 
   - icon: 🛡️
     title: Multi-Access Support
-    details: Mendukung penuh berbagai manajer akses sistem modern seperti Magisk, KernelSU, APatch (Sukisu), hingga Shizuku untuk pengguna Non-Root.
+    details: Fully supports various modern system access managers such as Magisk, KernelSU, APatch (Sukisu), and Shizuku for Non-Root users. 
     link: /guide/info
 
   - icon: 🛠️
     title: Open Source & Gratis
-    details: Proyek eksperimental yang sepenuhnya terbuka dan gratis untuk dikembangkan oleh komunitas demi ekosistem Android yang lebih baik.
----
+    details: A completely open and free experimental project for the community to develop for a better Android ecosystem. 
