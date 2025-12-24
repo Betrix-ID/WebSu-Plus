@@ -14,9 +14,8 @@ export default defineConfig({
     // Navigasi Bar Atas
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Informasi', link: '/guide/WebSu-info' },
+      { text: 'guide', link: '/guide/WebSu-info' },
       { text: 'Plugin', link: '/plugin/Pugin-websu' },
-      { text: 'Terminal', link: '/plugin/Terminal' } 
     ],
 
     sidebar: [
