@@ -2,7 +2,7 @@
 layout: home
 title: "WebSu Plus"
 titleTemplate: "Platform Modul Berbasis WebUI"
-description: "WebSu Plus" adalah aplikasi inovatif untuk menjalankan modul pihak ketiga berbasis WebUI dengan dukungan Root (Magisk, KernelSU, APatch) dan Non-Root (Shizuku)."
+description: "WebSu Plus adalah aplikasi inovatif untuk menjalankan modul pihak ketiga berbasis WebUI dengan dukungan Root (Magisk, KernelSU, APatch) dan Non-Root (Shizuku)."
 
 hero:
   name: "WebSu Plus"
