@@ -16,16 +16,15 @@ export default defineConfig({
       { text: 'Home', link: '/' },
       { text: 'Informasi', link: '/guide/WebSu-info' },
       { text: 'Plugin', link: '/plugin/Pugin-websu' },
-      { text: 'Terminal', link: '/guide/Terminal' } // Menambahkan link Terminal di atas
+      { text: 'Terminal', link: '/plugin/Terminal' } 
     ],
 
-    // Sidebar Samping
     sidebar: [
       {
         text: '📖 Panduan Dasar',
         items: [
-          { text: 'Apa itu WebSu Plus?', link: '/guide/WebSu-info' },
-          { text: 'Detail Izin (Root/Shizuku)', link: '/guide/info' },
+          { text: 'What is WebSu Plus? ', link: '/guide/WebSu-info' },
+          { text: 'Permission Details (Root/Shizuku) ', link: '/guide/info' },
         ]
       },
       {
@@ -37,7 +36,7 @@ export default defineConfig({
       {
         text: '💻 Referensi Teknis',
         items: [
-          { text: 'Quick Terminal', link: '/guide/Terminal' } // Menambahkan link ke Terminal.md
+          { text: 'Quick Terminal', link: '/plugin/Terminal' } 
         ]
       }
     ],
@@ -47,11 +46,10 @@ export default defineConfig({
     ],
 
     footer: {
-      message: 'Aplikasi Khusus Modul WebUI (Root & Unroot).',
+      message: 'WebUI Module Special Application (Root & Unroot). ',
       copyright: 'Copyright © 2025 WebSu Plus'
     },
 
-    // Fitur pencarian lokal
     search: {
       provider: 'local'
     }
