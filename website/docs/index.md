@@ -6,8 +6,8 @@ description: "WebSu Plus adalah aplikasi inovatif untuk menjalankan modul pihak 
 
 hero:
   name: "WebSu Plus"
-  text: "Universal WebUI Module Solution "
-  tagline: "Advanced System Control, With or Without Root. "
+  text: "Universal WebUI Module Solution"
+  tagline: "Advanced System Control, With or Without Root."
   image:
     src: ./logo.png
     alt: WebSu Plus Logo
@@ -41,3 +41,4 @@ features:
   - icon: 🛠️
     title: Open Source & Gratis
     details: A completely open and free experimental project for the community to develop for a better Android ecosystem. 
+---
